@@ -1,5 +1,6 @@
 import Link from "next/link";
 import BrandCarousel from "./components/BrandCarousel";
+import CountUp from "./components/CountUp";
 
 const stats = [
   { number: "7M+", label: "App installs", context: "Safaricom MPESA" },
@@ -115,7 +116,7 @@ export default function Home() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))", gap: "32px" }}>
             {stats.map((stat) => (
               <div key={stat.number} style={{ textAlign: "center" }}>
-                <div className="stat-number" style={{ fontSize: "clamp(32px, 4vw, 48px)", marginBottom: "6px" }}>{stat.number}</div>
+                <CountUp value={stat.number} className="stat-number" style={{ fontSize: "clamp(32px, 4vw, 48px)", marginBottom: "6px" }} />
                 <p style={{ fontWeight: 600, fontSize: "14px", color: "#F8FAFC", marginBottom: "4px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{stat.label}</p>
                 <p style={{ fontSize: "12px", color: "#94A3B8" }}>{stat.context}</p>
               </div>

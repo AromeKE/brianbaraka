@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://brianbaraka.com"),
   title: {
     default: "Brian Baraka | Growth Operator & Media Strategist",
     template: "%s | Brian Baraka",

@@ -1,5 +1,11 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { TrendChart, SplitBarChart } from "../../components/MetricChart";
+import CountUp from "../../components/CountUp";
+
+type ChartConfig =
+  | { kind: "trend"; caption: string; points: { x: string; y: number }[]; targetLabel?: string; targetValue?: number }
+  | { kind: "split"; caption: string; before: { label: string; value: number; sublabel: string }; after: { label: string; value: number; sublabel: string } };
 
 const caseStudies: Record<string, {
   brand: string;
@@ -8,6 +14,7 @@ const caseStudies: Record<string, {
   challenge: string;
   strategy: string;
   results: { metric: string; value: string }[];
+  chart: ChartConfig;
 }> = {
   "safaricom-mpesa": {
     brand: "Safaricom MPESA",
@@ -21,6 +28,18 @@ const caseStudies: Record<string, {
       { metric: "ROAS", value: "4.2x" },
       { metric: "Award", value: "MSK Judge's Choice" },
     ],
+    chart: {
+      kind: "trend",
+      caption: "Cumulative installs, year one (illustrative trajectory)",
+      points: [
+        { x: "Q1", y: 1.1 },
+        { x: "Q2", y: 2.9 },
+        { x: "Q3", y: 4.8 },
+        { x: "Q4", y: 7.0 },
+      ],
+      targetLabel: "Plan: 5.8M",
+      targetValue: 5.8,
+    },
   },
   "kcb-bank": {
     brand: "KCB Bank",
@@ -34,6 +53,17 @@ const caseStudies: Record<string, {
       { metric: "ROAS", value: "3.75x" },
       { metric: "Campaign Budget", value: "$70K" },
     ],
+    chart: {
+      kind: "trend",
+      caption: "Cumulative sign-ups, campaign lifetime (illustrative trajectory)",
+      points: [
+        { x: "Mo 1", y: 18 },
+        { x: "Mo 2", y: 41 },
+        { x: "Mo 3", y: 68 },
+        { x: "Mo 4", y: 95 },
+        { x: "Mo 5", y: 120 },
+      ],
+    },
   },
   "syngenta-cropwise": {
     brand: "Syngenta Cropwise Grower",
@@ -50,6 +80,18 @@ const caseStudies: Record<string, {
       { metric: "Best CTR", value: "5.07%" },
       { metric: "Lowest CPC", value: "$0.01" },
     ],
+    chart: {
+      kind: "trend",
+      caption: "Cumulative installs vs. original target (illustrative trajectory)",
+      points: [
+        { x: "Wk 2", y: 1800 },
+        { x: "Wk 4", y: 4200 },
+        { x: "Wk 6", y: 7900 },
+        { x: "Wk 8", y: 12543 },
+      ],
+      targetLabel: "Target: 6,000",
+      targetValue: 6000,
+    },
   },
   "mydawa": {
     brand: "MyDawa",
@@ -63,6 +105,12 @@ const caseStudies: Record<string, {
       { metric: "Budget Reallocated to Meta", value: "50%" },
       { metric: "Campaign Budget", value: "$80K" },
     ],
+    chart: {
+      kind: "split",
+      caption: "Revenue attribution, before vs. after the lift study",
+      before: { label: "Before", value: 60, sublabel: "Meta-attributed revenue (last-click)" },
+      after: { label: "After", value: 100, sublabel: "True Meta-influenced revenue (lift study)" },
+    },
   },
   "femmedetox": {
     brand: "FemmeDetox",
@@ -77,16 +125,29 @@ const caseStudies: Record<string, {
       { metric: "Bounce Rate Reduction", value: "25%" },
       { metric: "Campaign Budget", value: "$80K" },
     ],
+    chart: {
+      kind: "trend",
+      caption: "Indexed sales performance, campaign lifetime (illustrative trajectory)",
+      points: [
+        { x: "Mo 1", y: 100 },
+        { x: "Mo 2", y: 138 },
+        { x: "Mo 3", y: 176 },
+        { x: "Mo 4", y: 228.7 },
+      ],
+      targetLabel: "Baseline: 100",
+      targetValue: 100,
+    },
   },
 };
 
 const slugOrder = ["safaricom-mpesa", "kcb-bank", "syngenta-cropwise", "mydawa", "femmedetox"];
 
-export default function CaseStudy({ params }: { params: { slug: string } }) {
-  const cs = caseStudies[params.slug];
+export default async function CaseStudy({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const cs = caseStudies[slug];
   if (!cs) notFound();
 
-  const currentIndex = slugOrder.indexOf(params.slug);
+  const currentIndex = slugOrder.indexOf(slug);
   const prevSlug = currentIndex > 0 ? slugOrder[currentIndex - 1] : null;
   const nextSlug = currentIndex < slugOrder.length - 1 ? slugOrder[currentIndex + 1] : null;
   const prevCs = prevSlug ? caseStudies[prevSlug] : null;
@@ -108,10 +169,24 @@ export default function CaseStudy({ params }: { params: { slug: string } }) {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "16px", marginBottom: "56px" }}>
             {cs.results.map((r) => (
               <div key={r.metric} className="card" style={{ padding: "20px" }}>
-                <div className="stat-number" style={{ fontSize: "clamp(22px, 3vw, 28px)", marginBottom: "6px" }}>{r.value}</div>
+                <CountUp value={r.value} className="stat-number" style={{ fontSize: "clamp(22px, 3vw, 28px)", marginBottom: "6px" }} />
                 <p style={{ fontSize: "12px", color: "#94A3B8", lineHeight: 1.4 }}>{r.metric}</p>
               </div>
             ))}
+          </div>
+
+          {/* Visual proof */}
+          <div style={{ marginBottom: "56px" }}>
+            {cs.chart.kind === "trend" ? (
+              <TrendChart
+                caption={cs.chart.caption}
+                points={cs.chart.points}
+                targetLabel={cs.chart.targetLabel}
+                targetValue={cs.chart.targetValue}
+              />
+            ) : (
+              <SplitBarChart caption={cs.chart.caption} before={cs.chart.before} after={cs.chart.after} />
+            )}
           </div>
 
           {/* Challenge */}

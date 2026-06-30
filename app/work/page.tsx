@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CountUp from "../components/CountUp";
 
 const caseStudies = [
   {
@@ -88,7 +89,7 @@ export default function Work() {
                     <div style={{ display: "flex", gap: "clamp(20px, 4vw, 40px)", flexWrap: "wrap" }}>
                       {cs.stats.map((stat) => (
                         <div key={stat.label}>
-                          <div className="stat-number" style={{ fontSize: "clamp(24px, 3vw, 32px)", marginBottom: "4px" }}>{stat.number}</div>
+                          <CountUp value={stat.number} className="stat-number" style={{ fontSize: "clamp(24px, 3vw, 32px)", marginBottom: "4px" }} />
                           <p style={{ fontSize: "12px", color: "#94A3B8" }}>{stat.label}</p>
                         </div>
                       ))}
