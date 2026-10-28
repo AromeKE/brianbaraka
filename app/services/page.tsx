@@ -57,20 +57,20 @@ const steps = [
 
 export default function Services() {
   return (
-    <div style={{ background: "linear-gradient(160deg, #0F172A 0%, #0F2A1F 100%)" }}>
+    <div style={{ background: "linear-gradient(160deg, #FFFFFF 0%, #FFF6F0 100%)" }}>
 
       {/* HERO */}
       <section className="hero-section">
         <div className="container">
           <span className="section-label" style={{ marginBottom: "16px" }}>Services</span>
-          <h1 style={{ fontSize: "clamp(36px, 6vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#F8FAFC", marginBottom: "16px", marginTop: "12px" }}>
+          <h1 style={{ fontSize: "clamp(36px, 6vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#14110F", marginBottom: "16px", marginTop: "12px" }}>
             What I do.{" "}
-            <span style={{ color: "#10B981" }}>How I work.</span>
+            <span style={{ color: "#FF3B1F" }}>How I work.</span>
           </h1>
-          <p style={{ color: "#94A3B8", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, maxWidth: "480px", marginBottom: "12px" }}>
+          <p style={{ color: "#6B6560", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, maxWidth: "480px", marginBottom: "12px" }}>
             I take on select engagements with brands and teams who are serious about growth.
           </p>
-          <Link href="/work" style={{ color: "#06B6D4", fontSize: "14px", fontWeight: 600, textDecoration: "none", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+          <Link href="/work" style={{ color: "#2F5BFF", fontSize: "14px", fontWeight: 600, textDecoration: "none", fontFamily: "'Poppins', sans-serif" }}>
             See the results that back this up →
           </Link>
         </div>
@@ -85,28 +85,28 @@ export default function Services() {
                 <div className="grid-service">
                   <div>
                     <div style={{ fontSize: "32px", marginBottom: "16px" }}>{service.icon}</div>
-                    <h2 style={{ fontSize: "clamp(20px, 2.5vw, 26px)", fontWeight: 800, color: "#F8FAFC", marginBottom: "6px", letterSpacing: "-0.02em" }}>
+                    <h2 style={{ fontSize: "clamp(20px, 2.5vw, 26px)", fontWeight: 800, color: "#14110F", marginBottom: "6px", letterSpacing: "-0.02em" }}>
                       {service.title}
                     </h2>
-                    <p style={{ color: "#10B981", fontWeight: 600, fontSize: "14px", marginBottom: "16px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    <p style={{ color: "#FF3B1F", fontWeight: 600, fontSize: "14px", marginBottom: "16px", fontFamily: "'Poppins', sans-serif" }}>
                       {service.tagline}
                     </p>
-                    <p style={{ color: "#94A3B8", fontSize: "14px", lineHeight: 1.8, marginBottom: "16px" }}>
+                    <p style={{ color: "#6B6560", fontSize: "14px", lineHeight: 1.8, marginBottom: "16px" }}>
                       {service.description}
                     </p>
-                    <p style={{ color: "#475569", fontSize: "13px", lineHeight: 1.6, fontStyle: "italic" }}>
+                    <p style={{ color: "#9C948A", fontSize: "13px", lineHeight: 1.6, fontStyle: "italic" }}>
                       Best for: {service.bestFor}
                     </p>
                   </div>
                   <div>
-                    <p style={{ fontWeight: 700, fontSize: "12px", color: "#F8FAFC", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "16px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    <p style={{ fontWeight: 700, fontSize: "12px", color: "#14110F", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "16px", fontFamily: "'Poppins', sans-serif" }}>
                       What is included
                     </p>
                     <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "32px" }}>
                       {service.includes.map((item) => (
                         <div key={item} style={{ display: "flex", gap: "10px", alignItems: "flex-start" }}>
-                          <span style={{ color: "#10B981", marginTop: "2px", flexShrink: 0, fontSize: "13px" }}>✓</span>
-                          <span style={{ color: "#94A3B8", fontSize: "14px", lineHeight: 1.6 }}>{item}</span>
+                          <span style={{ color: "#FF3B1F", marginTop: "2px", flexShrink: 0, fontSize: "13px" }}>✓</span>
+                          <span style={{ color: "#6B6560", fontSize: "14px", lineHeight: 1.6 }}>{item}</span>
                         </div>
                       ))}
                     </div>
@@ -122,20 +122,20 @@ export default function Services() {
       </section>
 
       {/* PROCESS */}
-      <section className="section-sm" style={{ background: "rgba(255,255,255,0.02)", borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+      <section className="section-sm" style={{ background: "rgba(20,17,15,0.025)", borderTop: "1px solid rgba(20,17,15,0.08)", borderBottom: "1px solid rgba(20,17,15,0.08)" }}>
         <div className="container">
           <span className="section-label" style={{ marginBottom: "12px" }}>How I Work</span>
-          <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 800, color: "#F8FAFC", letterSpacing: "-0.02em", marginBottom: "40px", marginTop: "12px" }}>
+          <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 800, color: "#14110F", letterSpacing: "-0.02em", marginBottom: "40px", marginTop: "12px" }}>
             Simple process. No surprises.
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "32px" }}>
             {steps.map((step) => (
               <div key={step.step}>
-                <div style={{ fontWeight: 800, fontSize: "36px", color: "#10B981", opacity: 0.25, marginBottom: "12px", fontFamily: "'Plus Jakarta Sans', sans-serif", lineHeight: 1 }}>
+                <div style={{ fontWeight: 800, fontSize: "36px", color: "#FF3B1F", opacity: 0.25, marginBottom: "12px", fontFamily: "'Poppins', sans-serif", lineHeight: 1 }}>
                   {step.step}
                 </div>
-                <h3 style={{ fontWeight: 700, fontSize: "17px", color: "#F8FAFC", marginBottom: "10px" }}>{step.title}</h3>
-                <p style={{ color: "#94A3B8", fontSize: "14px", lineHeight: 1.7 }}>{step.body}</p>
+                <h3 style={{ fontWeight: 700, fontSize: "17px", color: "#14110F", marginBottom: "10px" }}>{step.title}</h3>
+                <p style={{ color: "#6B6560", fontSize: "14px", lineHeight: 1.7 }}>{step.body}</p>
               </div>
             ))}
           </div>
@@ -147,13 +147,13 @@ export default function Services() {
         <div className="container">
           <div className="cta-block">
             <span className="section-label" style={{ display: "block", marginBottom: "14px" }}>Availability</span>
-            <h2 style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 800, color: "#F8FAFC", letterSpacing: "-0.02em", marginBottom: "12px" }}>
+            <h2 style={{ fontSize: "clamp(22px, 3vw, 36px)", fontWeight: 800, color: "#14110F", letterSpacing: "-0.02em", marginBottom: "12px" }}>
               Not sure which service fits?
             </h2>
-            <p style={{ color: "#94A3B8", fontSize: "15px", lineHeight: 1.7, maxWidth: "420px", margin: "0 auto 12px" }}>
+            <p style={{ color: "#6B6560", fontSize: "15px", lineHeight: 1.7, maxWidth: "420px", margin: "0 auto 12px" }}>
               Send me a brief and I will tell you honestly whether I can help and how.
             </p>
-            <p style={{ color: "#10B981", fontWeight: 600, fontSize: "13px", marginBottom: "28px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+            <p style={{ color: "#FF3B1F", fontWeight: 600, fontSize: "13px", marginBottom: "28px", fontFamily: "'Poppins', sans-serif" }}>
               Open to new engagements from July 2026
             </p>
             <Link href="/contact" className="btn-primary">Send a Brief</Link>

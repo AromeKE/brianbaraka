@@ -75,7 +75,7 @@ export function TrendChart({
           fontWeight: 700,
           letterSpacing: "0.08em",
           textTransform: "uppercase",
-          color: "#94A3B8",
+          color: "#6B6560",
           marginBottom: "14px",
         }}
       >
@@ -84,12 +84,12 @@ export function TrendChart({
       <svg viewBox={`0 0 ${W} ${H}`} width="100%" height="auto" style={{ overflow: "visible" }}>
         <defs>
           <linearGradient id={`fill-${gradId}`} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stopColor="#10B981" stopOpacity="0.35" />
-            <stop offset="100%" stopColor="#10B981" stopOpacity="0" />
+            <stop offset="0%" stopColor="#FF3B1F" stopOpacity="0.35" />
+            <stop offset="100%" stopColor="#FF3B1F" stopOpacity="0" />
           </linearGradient>
           <linearGradient id={`stroke-${gradId}`} x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%" stopColor="#10B981" />
-            <stop offset="100%" stopColor="#06B6D4" />
+            <stop offset="0%" stopColor="#FF3B1F" />
+            <stop offset="100%" stopColor="#2F5BFF" />
           </linearGradient>
         </defs>
 
@@ -100,11 +100,11 @@ export function TrendChart({
               x2={W - PAD_X}
               y1={targetY}
               y2={targetY}
-              stroke="#475569"
+              stroke="#9C948A"
               strokeWidth="1"
               strokeDasharray="4 4"
             />
-            <text x={W - PAD_X} y={targetY - 6} textAnchor="end" fontSize="10" fill="#64748B">
+            <text x={W - PAD_X} y={targetY - 6} textAnchor="end" fontSize="10" fill="#857D72">
               {targetLabel}
             </text>
           </>
@@ -134,8 +134,8 @@ export function TrendChart({
             cx={c.x}
             cy={c.y}
             r={i === coords.length - 1 ? 4 : 2.5}
-            fill={i === coords.length - 1 ? "#10B981" : "#0F172A"}
-            stroke="#10B981"
+            fill={i === coords.length - 1 ? "#FF3B1F" : "#FFFFFF"}
+            stroke="#FF3B1F"
             strokeWidth="1.5"
             opacity={inView ? 1 : 0}
             style={{ transition: `opacity 0.4s ease ${0.6 + i * 0.08}s` }}
@@ -148,7 +148,7 @@ export function TrendChart({
             key={i}
             style={{
               fontSize: "10px",
-              color: "#64748B",
+              color: "#857D72",
               flex: 1,
               textAlign: i === 0 ? "left" : i === points.length - 1 ? "right" : "center",
             }}
@@ -158,7 +158,7 @@ export function TrendChart({
         ))}
       </div>
       {valueFormatter && (
-        <p style={{ fontSize: "12px", color: "#10B981", fontWeight: 600, marginTop: "12px" }}>
+        <p style={{ fontSize: "12px", color: "#FF3B1F", fontWeight: 600, marginTop: "12px" }}>
           {valueFormatter(points[points.length - 1].y)}
         </p>
       )}
@@ -184,10 +184,10 @@ export function SplitBarChart({
 
   const Bar = ({ data, color, delay }: { data: typeof before; color: string; delay: number }) => (
     <div style={{ flex: 1 }}>
-      <p style={{ fontSize: "11px", fontWeight: 700, color: "#94A3B8", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "10px" }}>
+      <p style={{ fontSize: "11px", fontWeight: 700, color: "#6B6560", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "10px" }}>
         {data.label}
       </p>
-      <div style={{ background: "rgba(255,255,255,0.04)", borderRadius: "8px", height: "120px", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
+      <div style={{ background: "rgba(20,17,15,0.035)", borderRadius: "8px", height: "120px", display: "flex", alignItems: "flex-end", overflow: "hidden" }}>
         <div
           style={{
             width: "100%",
@@ -201,18 +201,18 @@ export function SplitBarChart({
       <div className="stat-number" style={{ fontSize: "26px", marginTop: "12px" }}>
         {data.value}%
       </div>
-      <p style={{ fontSize: "12px", color: "#94A3B8", marginTop: "2px" }}>{data.sublabel}</p>
+      <p style={{ fontSize: "12px", color: "#6B6560", marginTop: "2px" }}>{data.sublabel}</p>
     </div>
   );
 
   return (
     <div ref={ref} className="card" style={{ padding: "24px 20px" }}>
-      <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#94A3B8", marginBottom: "20px" }}>
+      <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase", color: "#6B6560", marginBottom: "20px" }}>
         {caption}
       </p>
       <div style={{ display: "flex", gap: "24px" }}>
-        <Bar data={before} color="rgba(148,163,184,0.4)" delay={0.1} />
-        <Bar data={after} color="linear-gradient(135deg, #10B981, #06B6D4)" delay={0.35} />
+        <Bar data={before} color="rgba(120,113,108,0.35)" delay={0.1} />
+        <Bar data={after} color="linear-gradient(135deg, #FF3B1F, #2F5BFF)" delay={0.35} />
       </div>
     </div>
   );

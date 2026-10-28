@@ -154,14 +154,14 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
   const nextCs = nextSlug ? caseStudies[nextSlug] : null;
 
   return (
-    <div style={{ background: "linear-gradient(160deg, #0F172A 0%, #0F2A1F 100%)" }}>
+    <div style={{ background: "linear-gradient(160deg, #FFFFFF 0%, #FFF6F0 100%)" }}>
       <section className="hero-section">
         <div style={{ maxWidth: "760px", margin: "0 auto", padding: "0 20px" }}>
-          <Link href="/work" style={{ color: "#94A3B8", fontSize: "13px", textDecoration: "none", fontWeight: 500, display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "32px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+          <Link href="/work" style={{ color: "#6B6560", fontSize: "13px", textDecoration: "none", fontWeight: 500, display: "inline-flex", alignItems: "center", gap: "6px", marginBottom: "32px", fontFamily: "'Poppins', sans-serif" }}>
             ← Back to Work
           </Link>
           <span className="section-label" style={{ marginBottom: "16px" }}>{cs.tag}</span>
-          <h1 style={{ fontSize: "clamp(28px, 5vw, 52px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-0.03em", color: "#F8FAFC", marginBottom: "40px", marginTop: "12px" }}>
+          <h1 style={{ fontSize: "clamp(28px, 5vw, 52px)", fontWeight: 800, lineHeight: 1.1, letterSpacing: "-0.03em", color: "#14110F", marginBottom: "40px", marginTop: "12px" }}>
             {cs.headline}
           </h1>
 
@@ -170,7 +170,7 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
             {cs.results.map((r) => (
               <div key={r.metric} className="card" style={{ padding: "20px" }}>
                 <CountUp value={r.value} className="stat-number" style={{ fontSize: "clamp(22px, 3vw, 28px)", marginBottom: "6px" }} />
-                <p style={{ fontSize: "12px", color: "#94A3B8", lineHeight: 1.4 }}>{r.metric}</p>
+                <p style={{ fontSize: "12px", color: "#6B6560", lineHeight: 1.4 }}>{r.metric}</p>
               </div>
             ))}
           </div>
@@ -192,13 +192,13 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           {/* Challenge */}
           <div style={{ marginBottom: "40px" }}>
             <span className="section-label" style={{ marginBottom: "14px" }}>The Challenge</span>
-            <p style={{ color: "#94A3B8", fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.85, marginTop: "12px" }}>{cs.challenge}</p>
+            <p style={{ color: "#6B6560", fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.85, marginTop: "12px" }}>{cs.challenge}</p>
           </div>
 
           {/* Strategy */}
           <div style={{ marginBottom: "56px" }}>
             <span className="section-label" style={{ marginBottom: "14px" }}>The Strategy</span>
-            <p style={{ color: "#94A3B8", fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.85, marginTop: "12px" }}>{cs.strategy}</p>
+            <p style={{ color: "#6B6560", fontSize: "clamp(14px, 1.5vw, 16px)", lineHeight: 1.85, marginTop: "12px" }}>{cs.strategy}</p>
           </div>
 
           <div className="hero-buttons" style={{ marginBottom: "64px" }}>
@@ -207,21 +207,21 @@ export default async function CaseStudy({ params }: { params: Promise<{ slug: st
           </div>
 
           {/* Prev / Next */}
-          <div style={{ borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "40px" }}>
+          <div style={{ borderTop: "1px solid rgba(20,17,15,0.08)", paddingTop: "40px" }}>
             <div className="grid-case-nav">
               {prevCs && prevSlug ? (
                 <Link href={`/work/${prevSlug}`} style={{ textDecoration: "none" }}>
                   <div className="card" style={{ padding: "20px" }}>
-                    <p style={{ fontSize: "11px", color: "#94A3B8", marginBottom: "8px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>← Previous</p>
-                    <p style={{ fontWeight: 700, fontSize: "14px", color: "#F8FAFC", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{prevCs.brand}</p>
+                    <p style={{ fontSize: "11px", color: "#6B6560", marginBottom: "8px", fontFamily: "'Poppins', sans-serif" }}>← Previous</p>
+                    <p style={{ fontWeight: 700, fontSize: "14px", color: "#14110F", fontFamily: "'Poppins', sans-serif" }}>{prevCs.brand}</p>
                   </div>
                 </Link>
               ) : <div />}
               {nextCs && nextSlug ? (
                 <Link href={`/work/${nextSlug}`} style={{ textDecoration: "none" }}>
                   <div className="card" style={{ padding: "20px", textAlign: "right" }}>
-                    <p style={{ fontSize: "11px", color: "#94A3B8", marginBottom: "8px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Next →</p>
-                    <p style={{ fontWeight: 700, fontSize: "14px", color: "#F8FAFC", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{nextCs.brand}</p>
+                    <p style={{ fontSize: "11px", color: "#6B6560", marginBottom: "8px", fontFamily: "'Poppins', sans-serif" }}>Next →</p>
+                    <p style={{ fontWeight: 700, fontSize: "14px", color: "#14110F", fontFamily: "'Poppins', sans-serif" }}>{nextCs.brand}</p>
                   </div>
                 </Link>
               ) : <div />}

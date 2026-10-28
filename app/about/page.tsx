@@ -39,17 +39,17 @@ const credentials = [
 
 export default function About() {
   return (
-    <div style={{ background: "linear-gradient(160deg, #0F172A 0%, #0F2A1F 100%)" }}>
+    <div style={{ background: "linear-gradient(160deg, #FFFFFF 0%, #FFF6F0 100%)" }}>
 
       {/* HERO */}
       <section className="hero-section">
         <div className="container">
           <span className="section-label" style={{ marginBottom: "16px" }}>About</span>
-          <h1 style={{ fontSize: "clamp(36px, 6vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#F8FAFC", marginBottom: "20px", marginTop: "12px" }}>
+          <h1 style={{ fontSize: "clamp(36px, 6vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#14110F", marginBottom: "20px", marginTop: "12px" }}>
             I did not just study marketing.{" "}
-            <span style={{ color: "#10B981" }}>I went and did it.</span>
+            <span style={{ color: "#FF3B1F" }}>I went and did it.</span>
           </h1>
-          <p style={{ color: "#94A3B8", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, maxWidth: "520px" }}>
+          <p style={{ color: "#6B6560", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, maxWidth: "520px" }}>
             From running acquisition for Africa's largest fintech to optimizing Shopify brands in Hamburg. I built my career doing the hard, unglamorous work of figuring out what actually grows a business.
           </p>
         </div>
@@ -68,7 +68,7 @@ export default function About() {
                   "I then took a remote role at Accelerated Agency in Hamburg, Germany, owning CRO across six 8-figure European Shopify brands. I built a 40+ hypothesis backlog and operationalized behavioral science as testable, measurable interventions. It changed how I think about conversion forever.",
                   "Today I work as Media Buying and Research Manager at CreativeEdge FCB Nairobi, where I recently shipped a B2C agritech app to 109% of its install target at 12% under budget. I also operate my own businesses — because the best marketers have skin in the game.",
                 ].map((p, i) => (
-                  <p key={i} style={{ color: "#94A3B8", fontSize: "15px", lineHeight: 1.8 }}>{p}</p>
+                  <p key={i} style={{ color: "#6B6560", fontSize: "15px", lineHeight: 1.8 }}>{p}</p>
                 ))}
               </div>
             </div>
@@ -77,11 +77,11 @@ export default function About() {
               <span className="section-label" style={{ marginBottom: "24px" }}>What I Believe</span>
               <div style={{ display: "flex", flexDirection: "column", gap: "24px", marginTop: "12px" }}>
                 {beliefs.map((belief) => (
-                  <div key={belief.title} style={{ borderLeft: "2px solid #10B981", paddingLeft: "18px" }}>
-                    <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#F8FAFC", marginBottom: "6px" }}>
+                  <div key={belief.title} style={{ borderLeft: "2px solid #FF3B1F", paddingLeft: "18px" }}>
+                    <h3 style={{ fontSize: "15px", fontWeight: 700, color: "#14110F", marginBottom: "6px" }}>
                       {belief.title}
                     </h3>
-                    <p style={{ color: "#94A3B8", fontSize: "14px", lineHeight: 1.7 }}>{belief.body}</p>
+                    <p style={{ color: "#6B6560", fontSize: "14px", lineHeight: 1.7 }}>{belief.body}</p>
                   </div>
                 ))}
               </div>
@@ -91,19 +91,19 @@ export default function About() {
       </section>
 
       {/* TIMELINE */}
-      <section className="section-sm" style={{ background: "rgba(255,255,255,0.02)", borderTop: "1px solid rgba(255,255,255,0.06)", borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+      <section className="section-sm" style={{ background: "rgba(20,17,15,0.025)", borderTop: "1px solid rgba(20,17,15,0.08)", borderBottom: "1px solid rgba(20,17,15,0.08)" }}>
         <div className="container">
           <span className="section-label" style={{ marginBottom: "32px" }}>Career Timeline</span>
           <div style={{ display: "flex", flexDirection: "column" }}>
             {timeline.map((item, i) => (
-              <div key={i} className="grid-timeline-row" style={{ borderBottom: i < timeline.length - 1 ? "1px solid rgba(255,255,255,0.06)" : "none" }}>
+              <div key={i} className="grid-timeline-row" style={{ borderBottom: i < timeline.length - 1 ? "1px solid rgba(20,17,15,0.08)" : "none" }}>
                 <div>
-                  <p style={{ fontWeight: 700, fontSize: "13px", color: "#10B981", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{item.year}</p>
-                  <p style={{ fontSize: "12px", color: "#94A3B8", marginTop: "2px" }}>{item.location}</p>
+                  <p style={{ fontWeight: 700, fontSize: "13px", color: "#FF3B1F", fontFamily: "'Poppins', sans-serif" }}>{item.year}</p>
+                  <p style={{ fontSize: "12px", color: "#6B6560", marginTop: "2px" }}>{item.location}</p>
                 </div>
                 <div>
-                  <p style={{ fontWeight: 700, fontSize: "17px", color: "#F8FAFC", marginBottom: "4px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{item.role}</p>
-                  <p style={{ color: "#94A3B8", fontSize: "14px" }}>{item.company}</p>
+                  <p style={{ fontWeight: 700, fontSize: "17px", color: "#14110F", marginBottom: "4px", fontFamily: "'Poppins', sans-serif" }}>{item.role}</p>
+                  <p style={{ color: "#6B6560", fontSize: "14px" }}>{item.company}</p>
                 </div>
               </div>
             ))}
@@ -118,8 +118,8 @@ export default function About() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(260px, 1fr))", gap: "12px", marginTop: "12px" }}>
             {credentials.map((cred) => (
               <div key={cred} className="card" style={{ padding: "16px 20px", display: "flex", alignItems: "center", gap: "12px" }}>
-                <span style={{ color: "#10B981", fontSize: "14px", flexShrink: 0 }}>✓</span>
-                <span style={{ color: "#94A3B8", fontSize: "13px", lineHeight: 1.5 }}>{cred}</span>
+                <span style={{ color: "#FF3B1F", fontSize: "14px", flexShrink: 0 }}>✓</span>
+                <span style={{ color: "#6B6560", fontSize: "13px", lineHeight: 1.5 }}>{cred}</span>
               </div>
             ))}
           </div>
@@ -131,10 +131,10 @@ export default function About() {
         <div className="container">
           <div className="cta-block cta-row" style={{ textAlign: "left" }}>
             <div>
-              <h2 style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 800, color: "#F8FAFC", marginBottom: "8px", letterSpacing: "-0.02em" }}>
+              <h2 style={{ fontSize: "clamp(22px, 3vw, 32px)", fontWeight: 800, color: "#14110F", marginBottom: "8px", letterSpacing: "-0.02em" }}>
                 Want to work together?
               </h2>
-              <p style={{ color: "#94A3B8", fontSize: "15px" }}>
+              <p style={{ color: "#6B6560", fontSize: "15px" }}>
                 I take on select engagements with brands serious about growth.
               </p>
             </div>
