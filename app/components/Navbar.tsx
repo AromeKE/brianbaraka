@@ -55,9 +55,10 @@ export default function Navbar() {
             textDecoration: "none",
             letterSpacing: "-0.03em",
             flexShrink: 0,
+            whiteSpace: "nowrap",
           }}
         >
-          Brian<span style={{ color: "#FF3B1F" }}>.</span>
+          Brian Baraka<span style={{ color: "#FF3B1F" }}>.</span>
         </Link>
 
         {/* Desktop */}

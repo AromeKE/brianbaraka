@@ -40,7 +40,7 @@ export default function Footer() {
                 letterSpacing: "-0.03em",
               }}
             >
-              Brian<span style={{ color: "#FF3B1F" }}>.</span>
+              Brian Baraka<span style={{ color: "#FF3B1F" }}>.</span>
             </Link>
             <p style={{ color: "rgba(255,255,255,0.78)", fontSize: "15px", lineHeight: 1.7, maxWidth: "280px" }}>
               Growth operator and media strategist based in Nairobi, Kenya. Building systems that scale.
