@@ -37,9 +37,9 @@ export default function BrandCarousel() {
   return (
     <div className="brand-bar">
       {/* Left fade */}
-      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "80px", background: "linear-gradient(to right, #0F172A, transparent)", zIndex: 2, pointerEvents: "none" }} />
+      <div style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: "80px", background: "linear-gradient(to right, #FFFBF5, transparent)", zIndex: 2, pointerEvents: "none" }} />
       {/* Right fade */}
-      <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "80px", background: "linear-gradient(to left, #0F172A, transparent)", zIndex: 2, pointerEvents: "none" }} />
+      <div style={{ position: "absolute", right: 0, top: 0, bottom: 0, width: "80px", background: "linear-gradient(to left, #FFFBF5, transparent)", zIndex: 2, pointerEvents: "none" }} />
 
       <p className="section-label" style={{ textAlign: "center", marginBottom: "18px", position: "relative", zIndex: 3 }}>
         Trusted by teams at
@@ -60,10 +60,10 @@ export default function BrandCarousel() {
             <span
               key={i}
               style={{
-                fontFamily: "'Plus Jakarta Sans', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: "14px",
-                color: "#3D5068",
+                color: "#8A8178",
                 letterSpacing: "0.06em",
                 whiteSpace: "nowrap",
                 userSelect: "none",

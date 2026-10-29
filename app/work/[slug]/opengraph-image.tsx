@@ -70,7 +70,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px",
-          background: "linear-gradient(160deg, #0F172A 0%, #0F2A1F 100%)",
+          background: "linear-gradient(160deg, #FFFFFF 0%, #FFF6F0 100%)",
           fontFamily: "sans-serif",
         }}
       >
@@ -82,7 +82,7 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               fontWeight: 700,
               letterSpacing: "0.15em",
               textTransform: "uppercase",
-              color: "#10B981",
+              color: "#FF3B1F",
               marginBottom: 28,
             }}
           >
@@ -95,14 +95,14 @@ export default async function Image({ params }: { params: Promise<{ slug: string
               fontWeight: 800,
               lineHeight: 1.12,
               letterSpacing: "-0.03em",
-              color: "#F8FAFC",
+              color: "#14110F",
               maxWidth: 980,
               marginBottom: 16,
             }}
           >
             {cs ? cs.headline : "Real briefs. Real budgets. Real results."}
           </div>
-          <div style={{ display: "flex", fontSize: 24, color: "#94A3B8" }}>
+          <div style={{ display: "flex", fontSize: 24, color: "#6B6560" }}>
             {cs ? cs.brand : "Brian Baraka"} — by Brian Baraka
           </div>
         </div>
@@ -110,10 +110,10 @@ export default async function Image({ params }: { params: Promise<{ slug: string
         <div style={{ display: "flex", gap: 56 }}>
           {(cs ? cs.stats : []).map((stat) => (
             <div key={stat.label} style={{ display: "flex", flexDirection: "column" }}>
-              <div style={{ display: "flex", fontSize: 48, fontWeight: 800, color: "#10B981", marginBottom: 6 }}>
+              <div style={{ display: "flex", fontSize: 48, fontWeight: 800, color: "#FF3B1F", marginBottom: 6 }}>
                 {stat.value}
               </div>
-              <div style={{ display: "flex", fontSize: 18, color: "#94A3B8" }}>{stat.label}</div>
+              <div style={{ display: "flex", fontSize: 18, color: "#6B6560" }}>{stat.label}</div>
             </div>
           ))}
         </div>

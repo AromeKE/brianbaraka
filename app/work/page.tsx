@@ -56,17 +56,17 @@ const caseStudies = [
 
 export default function Work() {
   return (
-    <div style={{ background: "linear-gradient(160deg, #0F172A 0%, #0F2A1F 100%)" }}>
+    <div style={{ background: "linear-gradient(160deg, #FFFFFF 0%, #FFF6F0 100%)" }}>
 
       {/* HERO */}
       <section className="hero-section">
         <div className="container">
           <span className="section-label" style={{ marginBottom: "16px" }}>Case Studies</span>
-          <h1 style={{ fontSize: "clamp(36px, 6vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#F8FAFC", marginBottom: "16px", marginTop: "12px" }}>
+          <h1 style={{ fontSize: "clamp(36px, 6vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#14110F", marginBottom: "16px", marginTop: "12px" }}>
             Real briefs. Real budgets.{" "}
-            <span style={{ color: "#10B981" }}>Real results.</span>
+            <span style={{ color: "#FF3B1F" }}>Real results.</span>
           </h1>
-          <p style={{ color: "#94A3B8", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, maxWidth: "480px" }}>
+          <p style={{ color: "#6B6560", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, maxWidth: "480px" }}>
             Every case study below started with a problem, a hypothesis, and a plan. Here is what happened when we executed.
           </p>
         </div>
@@ -79,10 +79,10 @@ export default function Work() {
             {caseStudies.map((cs) => (
               <Link key={cs.slug} href={`/work/${cs.slug}`} style={{ textDecoration: "none" }}>
                 <div className="card" style={{ padding: "clamp(24px, 4vw, 48px)" }}>
-                  <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#10B981", marginBottom: "12px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                  <p style={{ fontSize: "11px", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase", color: "#FF3B1F", marginBottom: "12px", fontFamily: "'Poppins', sans-serif" }}>
                     {cs.tag}
                   </p>
-                  <h2 style={{ fontSize: "clamp(17px, 2.5vw, 24px)", fontWeight: 700, color: "#F8FAFC", lineHeight: 1.3, marginBottom: "28px" }}>
+                  <h2 style={{ fontSize: "clamp(17px, 2.5vw, 24px)", fontWeight: 700, color: "#14110F", lineHeight: 1.3, marginBottom: "28px" }}>
                     {cs.headline}
                   </h2>
                   <div style={{ display: "flex", gap: "clamp(20px, 4vw, 48px)", flexWrap: "wrap", justifyContent: "space-between", alignItems: "flex-end" }}>
@@ -90,11 +90,11 @@ export default function Work() {
                       {cs.stats.map((stat) => (
                         <div key={stat.label}>
                           <CountUp value={stat.number} className="stat-number" style={{ fontSize: "clamp(24px, 3vw, 32px)", marginBottom: "4px" }} />
-                          <p style={{ fontSize: "12px", color: "#94A3B8" }}>{stat.label}</p>
+                          <p style={{ fontSize: "12px", color: "#6B6560" }}>{stat.label}</p>
                         </div>
                       ))}
                     </div>
-                    <span style={{ fontWeight: 700, fontSize: "13px", color: "#06B6D4", fontFamily: "'Plus Jakarta Sans', sans-serif", flexShrink: 0 }}>
+                    <span style={{ fontWeight: 700, fontSize: "13px", color: "#2F5BFF", fontFamily: "'Poppins', sans-serif", flexShrink: 0 }}>
                       View →
                     </span>
                   </div>
@@ -109,10 +109,10 @@ export default function Work() {
       <section className="section" style={{ paddingTop: "0" }}>
         <div className="container">
           <div className="cta-block">
-            <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 800, color: "#F8FAFC", letterSpacing: "-0.02em", marginBottom: "12px" }}>
+            <h2 style={{ fontSize: "clamp(24px, 3vw, 36px)", fontWeight: 800, color: "#14110F", letterSpacing: "-0.02em", marginBottom: "12px" }}>
               Seen enough?
             </h2>
-            <p style={{ color: "#94A3B8", fontSize: "15px", marginBottom: "28px" }}>
+            <p style={{ color: "#6B6560", fontSize: "15px", marginBottom: "28px" }}>
               Let's talk about what we can build together.
             </p>
             <Link href="/contact" className="btn-primary">Start a Conversation</Link>

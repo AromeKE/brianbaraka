@@ -20,40 +20,39 @@ export default function Contact() {
 
   const inputStyle = {
     width: "100%",
-    background: "rgba(255,255,255,0.04)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    borderRadius: "8px",
+    background: "#FFFFFF",
+    border: "2px solid #14110F",
+    borderRadius: "12px",
     padding: "12px 14px",
-    color: "#F8FAFC",
+    color: "#14110F",
     fontSize: "15px",
     fontFamily: "'Inter', sans-serif",
-    outline: "none",
     transition: "border-color 0.2s",
   } as React.CSSProperties;
 
   const labelStyle = {
     display: "block",
-    fontFamily: "'Plus Jakarta Sans', sans-serif",
+    fontFamily: "'Poppins', sans-serif",
     fontWeight: 600,
     fontSize: "12px",
-    color: "#94A3B8",
+    color: "#6B6560",
     marginBottom: "8px",
     textTransform: "uppercase" as const,
     letterSpacing: "0.06em",
   };
 
   return (
-    <div style={{ background: "linear-gradient(160deg, #0F172A 0%, #0F2A1F 100%)" }}>
+    <div style={{ background: "linear-gradient(160deg, #FFFFFF 0%, #FFF6F0 100%)" }}>
 
       {/* HERO */}
       <section className="hero-section">
         <div className="container">
           <span className="section-label" style={{ marginBottom: "16px" }}>Contact</span>
-          <h1 style={{ fontSize: "clamp(36px, 6vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#F8FAFC", marginBottom: "16px", marginTop: "12px" }}>
+          <h1 style={{ fontSize: "clamp(36px, 6vw, 68px)", fontWeight: 800, lineHeight: 1.08, letterSpacing: "-0.03em", color: "#14110F", marginBottom: "16px", marginTop: "12px" }}>
             Let's build something{" "}
-            <span style={{ color: "#10B981" }}>that grows.</span>
+            <span style={{ color: "#FF3B1F" }}>that grows.</span>
           </h1>
-          <p style={{ color: "#94A3B8", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, maxWidth: "480px" }}>
+          <p style={{ color: "#6B6560", fontSize: "clamp(15px, 2vw, 17px)", lineHeight: 1.75, maxWidth: "480px" }}>
             Whether you have a brief, a budget, or just a problem you cannot crack — reach out. I respond to every message personally.
           </p>
         </div>
@@ -74,33 +73,33 @@ export default function Contact() {
                     { icon: "💬", label: "WhatsApp", value: "+254 724 491 210", href: "https://wa.me/254724491210" },
                   ].map((item) => (
                     <a key={item.label} href={item.href} target={item.href.startsWith("https") ? "_blank" : undefined} rel="noopener noreferrer" style={{ display: "flex", gap: "14px", alignItems: "center", textDecoration: "none" }}>
-                      <div style={{ width: "42px", height: "42px", background: "rgba(16,185,129,0.1)", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", flexShrink: 0 }}>
+                      <div style={{ width: "42px", height: "42px", background: "rgba(255,59,31,0.08)", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", flexShrink: 0 }}>
                         {item.icon}
                       </div>
                       <div>
-                        <p style={{ fontWeight: 600, fontSize: "13px", color: "#F8FAFC", marginBottom: "2px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{item.label}</p>
-                        <p style={{ color: "#10B981", fontSize: "13px" }}>{item.value}</p>
+                        <p style={{ fontWeight: 600, fontSize: "13px", color: "#14110F", marginBottom: "2px", fontFamily: "'Poppins', sans-serif" }}>{item.label}</p>
+                        <p style={{ color: "#FF3B1F", fontSize: "13px" }}>{item.value}</p>
                       </div>
                     </a>
                   ))}
                   <div style={{ display: "flex", gap: "14px", alignItems: "center" }}>
-                    <div style={{ width: "42px", height: "42px", background: "rgba(16,185,129,0.1)", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", flexShrink: 0 }}>📍</div>
+                    <div style={{ width: "42px", height: "42px", background: "rgba(255,59,31,0.08)", borderRadius: "10px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "16px", flexShrink: 0 }}>📍</div>
                     <div>
-                      <p style={{ fontWeight: 600, fontSize: "13px", color: "#F8FAFC", marginBottom: "2px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Location</p>
-                      <p style={{ color: "#94A3B8", fontSize: "13px", lineHeight: 1.5 }}>Nairobi, Kenya. Working with clients across Africa, Europe, and beyond.</p>
+                      <p style={{ fontWeight: 600, fontSize: "13px", color: "#14110F", marginBottom: "2px", fontFamily: "'Poppins', sans-serif" }}>Location</p>
+                      <p style={{ color: "#6B6560", fontSize: "13px", lineHeight: 1.5 }}>Nairobi, Kenya. Working with clients across Africa, Europe, and beyond.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="card" style={{ padding: "20px" }}>
-                <p style={{ fontWeight: 700, fontSize: "13px", color: "#10B981", marginBottom: "6px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Response Time</p>
-                <p style={{ color: "#94A3B8", fontSize: "13px", lineHeight: 1.6 }}>I typically respond within 24 hours on business days.</p>
+                <p style={{ fontWeight: 700, fontSize: "13px", color: "#FF3B1F", marginBottom: "6px", fontFamily: "'Poppins', sans-serif" }}>Response Time</p>
+                <p style={{ color: "#6B6560", fontSize: "13px", lineHeight: 1.6 }}>I typically respond within 24 hours on business days.</p>
               </div>
 
               <div className="card" style={{ padding: "20px" }}>
-                <p style={{ fontWeight: 700, fontSize: "13px", color: "#F8FAFC", marginBottom: "6px", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>Want to see my work first?</p>
-                <Link href="/work" style={{ color: "#06B6D4", fontSize: "13px", textDecoration: "none", fontWeight: 600 }}>View case studies →</Link>
+                <p style={{ fontWeight: 700, fontSize: "13px", color: "#14110F", marginBottom: "6px", fontFamily: "'Poppins', sans-serif" }}>Want to see my work first?</p>
+                <Link href="/work" style={{ color: "#2F5BFF", fontSize: "13px", textDecoration: "none", fontWeight: 600 }}>View case studies →</Link>
               </div>
             </div>
 
@@ -109,14 +108,14 @@ export default function Contact() {
               {submitted ? (
                 <div style={{ textAlign: "center", padding: "32px 0" }}>
                   <div style={{ fontSize: "44px", marginBottom: "20px" }}>✅</div>
-                  <h2 style={{ fontWeight: 800, fontSize: "24px", color: "#F8FAFC", marginBottom: "12px" }}>Message received.</h2>
-                  <p style={{ color: "#94A3B8", fontSize: "15px", lineHeight: 1.7 }}>
+                  <h2 style={{ fontWeight: 800, fontSize: "24px", color: "#14110F", marginBottom: "12px" }}>Message received.</h2>
+                  <p style={{ color: "#6B6560", fontSize: "15px", lineHeight: 1.7 }}>
                     Thanks for reaching out. I will get back to you within 24 hours.
                   </p>
                 </div>
               ) : (
                 <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                  <h2 style={{ fontWeight: 700, fontSize: "20px", color: "#F8FAFC" }}>Send me a brief</h2>
+                  <h2 style={{ fontWeight: 700, fontSize: "20px", color: "#14110F" }}>Send me a brief</h2>
 
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
                     <div>
@@ -137,7 +136,7 @@ export default function Contact() {
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
                     <div>
                       <label style={labelStyle}>I need help with</label>
-                      <select value={formData.service} onChange={(e) => setFormData({ ...formData, service: e.target.value })} style={{ ...inputStyle, background: "#1E293B" }}>
+                      <select value={formData.service} onChange={(e) => setFormData({ ...formData, service: e.target.value })} style={{ ...inputStyle, background: "#FFFFFF" }}>
                         <option value="">Select a service</option>
                         <option value="performance">Performance Marketing</option>
                         <option value="strategy">Growth Strategy</option>
@@ -147,7 +146,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <label style={labelStyle}>Budget Range</label>
-                      <select value={formData.budget} onChange={(e) => setFormData({ ...formData, budget: e.target.value })} style={{ ...inputStyle, background: "#1E293B" }}>
+                      <select value={formData.budget} onChange={(e) => setFormData({ ...formData, budget: e.target.value })} style={{ ...inputStyle, background: "#FFFFFF" }}>
                         <option value="">Select a range</option>
                         <option value="under5k">Under $5,000</option>
                         <option value="5k-15k">$5,000 to $15,000</option>
@@ -186,8 +185,8 @@ export default function Contact() {
       </section>
 
       <style>{`
-        input::placeholder, textarea::placeholder, select option { color: #475569; }
-        input:focus, textarea:focus, select:focus { border-color: rgba(16,185,129,0.4) !important; }
+        input::placeholder, textarea::placeholder, select option { color: #9C948A; }
+        input:focus, textarea:focus, select:focus { border-color: rgba(255,59,31,0.4) !important; }
         @media (max-width: 480px) {
           .form-row-2 { grid-template-columns: 1fr !important; }
         }
